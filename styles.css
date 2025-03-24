@@ -1,0 +1,41 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 1336px;
+    margin: 0 auto;
+    font-weight: bold;
+
+}
+
+.navbar-background {
+    background-image: url('treadmill-1.jpg');
+    background-size: cover;
+    background-position: center; 
+    height: 100vh;/* Full viewport height */
+    position: relative;
+    object-fit: contain;
+    background-size: cover;
+    object-position: center;
+
+
+}
+
+.navbar-background .nav-link 
+{
+    color: white !important;
+}
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+
