@@ -6,6 +6,11 @@
     <meta name="description" content="Your premier gym and fitness destination">
     <title>Fitness Gym</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -183,7 +188,7 @@
                     <li>Access to 3 Classes / week</li>
                     <li>Access to On-Demand Fitness Videos</li>
                 </ul>
-                <button style="width: 90%; margin: 1rem auto; background-color: black; color: white; padding: .5rem 1rem; border-radius: 1rem;">Sign Up</button>
+                <button style="width: 90%; margin: 1rem auto; background-color: black; color: white; padding: .5rem 1rem; border-radius: 1rem;" data-target="#signUpModal" data-toggle="modal">Sign Up</button>
             </div>
             <div style="width: 30%; background-color: black; color: white; border-radius: 1rem; box-shadow: 0 0 30px 0 rgba(0,0,0,0.2);">
                 <p style="margin: 1rem 0;">Premium</p>
@@ -193,7 +198,7 @@
                     <li>Access to On-Demand Fitness Videos</li>
                     <li>Access to Personalized Training</li>
                 </ul>
-                <button style="width: 90%; margin: 1rem auto; background-color: white; color: black; padding: .5rem 1rem; border-radius: 1rem;">Sign Up</button>
+                <button style="width: 90%; margin: 1rem auto; background-color: white; color: black; padding: .5rem 1rem; border-radius: 1rem;" data-target="#signUpModal" data-toggle="modal">Sign Up</button>
             </div>
             <div style="width: 30%; border-radius: 1rem; box-shadow: 0 0 30px 0 rgba(0,0,0,0.2);">
                 <p style="margin: 1rem 0;">Elite</p>
@@ -204,7 +209,113 @@
                     <li>Access to Personalized Training</li>
                     <li>Personalized Nutrition Plan</li>
                 </ul>
-                <button style="width: 90%; margin: 1rem auto; background-color: black; color: white; padding: .5rem 1rem; border-radius: 1rem;">Sign Up</button>
+                <button style="width: 90%; margin: 1rem auto; background-color: black; color: white; padding: .5rem 1rem; border-radius: 1rem;" data-target="#signUpModal" data-toggle="modal">Sign Up</button>
+            </div>
+        </div>
+
+        <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+            <div class="modal-dialog" style="max-width: 70%;" role="document">
+                <div class="modal-content" style="border-radius: 1rem; padding: 3rem;">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="signUpModalLabel" style="text-align: left;">Sign Up</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div style="margin-bottom: 1rem;">
+                                <div class="form-row">
+                                    <div class="col" style="padding-left: 3rem; padding-right: 3rem;">
+                                        <div class="form-group">
+                                            <label style="text-align: left;" for="name">Name</label>
+                                            <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name" style="width: 100%;">
+                                        </div>
+                                    </div>
+                                    <div class="col" style="padding-left: 3rem; padding-right: 3rem;">
+                                        <div class="form-group">
+                                            <label style="text-align: left;" for="phone">Phone No.</label>
+                                            <input type="text" class="form-control" id="phone" aria-describedby="phoneHelp" placeholder="Enter phone no." style="width: 100%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-bottom: 1rem;">
+                                <div class="form-row">
+                                    <div class="col" style="padding-left: 3rem; padding-right: 3rem;">
+                                        <div class="form-group">
+                                            <label style="text-align: left;" for="email">Email address</label>
+                                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" style="width: 100%;">
+                                        </div>
+                                    </div>
+                                    <div class="col" style="padding-left: 3rem; padding-right: 3rem;">
+                                        <div class="form-group">
+                                            <label style="text-align: left;" for="password">Password</label>
+                                            <input type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="Enter password" style="width: 100%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-bottom: 1rem;">
+                                <div class="form-row">
+                                    <div class="col" style="padding-left: 3rem; padding-right: 3rem;">
+                                        <div class="form-group">
+                                            <label style="text-align: left;" for="gender">Gender</label>
+                                            <select class="form-control" id="gender" style="width: 100%;">
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col" style="padding-left: 3rem; padding-right: 3rem;">
+                                        <div class="form-group">
+                                            <label style="text-align: left;" for="plan">Plan</label>
+                                            <select class="form-control" id="plan" style="width: 100%;">
+                                                <option value="basic">Basic</option>
+                                                <option value="premium">Premium</option>
+                                                <option value="elite">Elite</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-bottom: 1rem;">
+                                <div class="form-row">
+                                    <div class="col" style="padding-left: 3rem; padding-right: 3rem;">
+                                        <div class="form-group">
+                                            <label style="text-align: left;" for="duration">Duration</label>
+                                            <select class="form-control" id="duration" style="width: 100%;">
+                                                <option value="monthly">Monthly</option>
+                                                <option value="yearly">Yearly</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col" style="padding-left: 3rem; padding-right: 3rem;">
+                                        <div class="form-group">
+                                            <label style="text-align: left;" for="startDate">Start Date</label>
+                                            <input type="date" class="form-control" id="startDate" aria-describedby="startDateHelp" style="width: 100%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-bottom: 1rem;">
+                                <div class="form-row">
+                                    <div class="col" style="padding-left: 3rem; padding-right: 3rem;">
+                                        <div class="form-group">
+                                            <label style="text-align: left;" for="endDate">End Date</label>
+                                            <input type="date" class="form-control" id="endDate" aria-describedby="endDateHelp" style="width: 100%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Sign Up</button>
+                    </div>
+                </div>
             </div>
         </div>
 
