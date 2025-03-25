@@ -217,25 +217,25 @@
             <div class="modal-dialog" style="max-width: 70%;" role="document">
                 <div class="modal-content" style="border-radius: 1rem; padding: 3rem;">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="signUpModalLabel" style="text-align: left;">Sign Up</h5>
+                        <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form id="signUpForm">
                             <div style="margin-bottom: 1rem;">
                                 <div class="form-row">
                                     <div class="col" style="padding-left: 3rem; padding-right: 3rem;">
                                         <div class="form-group">
                                             <label style="text-align: left;" for="name">Name</label>
-                                            <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name" style="width: 100%;">
+                                            <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name" style="width: 100%;" required>
                                         </div>
                                     </div>
                                     <div class="col" style="padding-left: 3rem; padding-right: 3rem;">
                                         <div class="form-group">
                                             <label style="text-align: left;" for="phone">Phone No.</label>
-                                            <input type="text" class="form-control" id="phone" aria-describedby="phoneHelp" placeholder="Enter phone no." style="width: 100%;">
+                                            <input type="text" class="form-control" id="phone" aria-describedby="phoneHelp" placeholder="Enter phone no." style="width: 100%;" required>
                                         </div>
                                     </div>
                                 </div>
@@ -245,13 +245,13 @@
                                     <div class="col" style="padding-left: 3rem; padding-right: 3rem;">
                                         <div class="form-group">
                                             <label style="text-align: left;" for="email">Email address</label>
-                                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" style="width: 100%;">
+                                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" style="width: 100%;" required>
                                         </div>
                                     </div>
                                     <div class="col" style="padding-left: 3rem; padding-right: 3rem;">
                                         <div class="form-group">
                                             <label style="text-align: left;" for="password">Password</label>
-                                            <input type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="Enter password" style="width: 100%;">
+                                            <input type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="Enter password" style="width: 100%;" required>
                                         </div>
                                     </div>
                                 </div>
@@ -261,7 +261,7 @@
                                     <div class="col" style="padding-left: 3rem; padding-right: 3rem;">
                                         <div class="form-group">
                                             <label style="text-align: left;" for="gender">Gender</label>
-                                            <select class="form-control" id="gender" style="width: 100%;">
+                                            <select class="form-control" id="gender" style="width: 100%;" required>
                                                 <option value="male">Male</option>
                                                 <option value="female">Female</option>
                                                 <option value="other">Other</option>
@@ -271,7 +271,7 @@
                                     <div class="col" style="padding-left: 3rem; padding-right: 3rem;">
                                         <div class="form-group">
                                             <label style="text-align: left;" for="plan">Plan</label>
-                                            <select class="form-control" id="plan" style="width: 100%;">
+                                            <select class="form-control" id="plan" style="width: 100%;" required>
                                                 <option value="basic">Basic</option>
                                                 <option value="premium">Premium</option>
                                                 <option value="elite">Elite</option>
@@ -285,7 +285,7 @@
                                     <div class="col" style="padding-left: 3rem; padding-right: 3rem;">
                                         <div class="form-group">
                                             <label style="text-align: left;" for="duration">Duration</label>
-                                            <select class="form-control" id="duration" style="width: 100%;">
+                                            <select class="form-control" id="duration" style="width: 100%;" required>
                                                 <option value="monthly">Monthly</option>
                                                 <option value="yearly">Yearly</option>
                                             </select>
@@ -294,7 +294,7 @@
                                     <div class="col" style="padding-left: 3rem; padding-right: 3rem;">
                                         <div class="form-group">
                                             <label style="text-align: left;" for="startDate">Start Date</label>
-                                            <input type="date" class="form-control" id="startDate" aria-describedby="startDateHelp" style="width: 100%;">
+                                            <input type="date" class="form-control" id="startDate" aria-describedby="startDateHelp" style="width: 100%;" required>
                                         </div>
                                     </div>
                                 </div>
@@ -304,7 +304,39 @@
                                     <div class="col" style="padding-left: 3rem; padding-right: 3rem;">
                                         <div class="form-group">
                                             <label style="text-align: left;" for="endDate">End Date</label>
-                                            <input type="date" class="form-control" id="endDate" aria-describedby="endDateHelp" style="width: 100%;">
+                                            <input type="date" class="form-control" id="endDate" aria-describedby="endDateHelp" style="width: 100%;" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-bottom: 1rem;">
+                                <div class="form-row">
+                                    <div class="col" style="padding-left: 3rem; padding-right: 3rem;">
+                                        <div class="form-group">
+                                            <label style="text-align: left;" for="cardNumber">Card Number</label>
+                                            <input type="text" class="form-control" id="cardNumber" aria-describedby="cardNumberHelp" placeholder="Enter card number" style="width: 100%;" required>
+                                        </div>
+                                    </div>
+                                    <div class="col" style="padding-left: 3rem; padding-right: 3rem;">
+                                        <div class="form-group">
+                                            <label style="text-align: left;" for="cvv">CVV</label>
+                                            <input type="text" class="form-control" id="cvv" aria-describedby="cvvHelp" placeholder="Enter cvv" style="width: 100%;" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="margin-bottom: 1rem;">
+                                <div class="form-row">
+                                    <div class="col" style="padding-left: 3rem; padding-right: 3rem;">
+                                        <div class="form-group">
+                                            <label style="text-align: left;" for="expiryYear">Year of Expiry</label>
+                                            <select class="form-control" id="expiryYear" aria-describedby="expiryYearHelp" style="width: 100%;" required>
+                                                <option value="2022">2022</option>
+                                                <option value="2023">2023</option>
+                                                <option value="2024">2024</option>
+                                                <option value="2025">2025</option>
+                                                <option value="2026">2026</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>
@@ -313,11 +345,17 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Sign Up</button>
+                        <button type="submit" class="btn btn-primary" form="signUpForm" id="makePayment">Make Payment</button>
                     </div>
                 </div>
             </div>
         </div>
+
+        <script>
+            document.getElementById("makePayment").addEventListener("click", () => {
+                document.querySelector(".modal-body").innerHTML = "<p style='text-align: center; margin: 2rem 0;'>Thank You for your payment!</p>";
+            });
+        </script>
 
     <div class="text-center p-5 mt-5 mb-5" style="color: black;">
         <h1 style="margin-bottom: 5rem;"><strong>What Our Students Say</strong></h1>
